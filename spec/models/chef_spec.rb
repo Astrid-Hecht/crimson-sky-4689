@@ -43,7 +43,7 @@ RSpec.describe Chef, type: :model do
 
     describe '#top_ingr' do
       it 'returns list of used ingr by frequency' do
-        expect(guy.top_ingr).to eq([bacon, bread, letuce])
+        expect(guy.top_ingr).to eq([bacon, bread, lettuce])
       end
     end
 
