@@ -1,8 +1,8 @@
 <h1><%=@dish.name%> Info</h1>
 
-<div id='name'><%= @dish.name%> </div>
+<div id='name'>Name: <%= @dish.name%> </div>
 <br>
-<div id='descript'><%= @dish.description%> </div>
+<div id='descript'>Description: <%= @dish.description%> </div>
 <br>
 <table id='ingredients'>
   <tr><td>Ingredients</td></tr>
@@ -10,6 +10,6 @@
   <tr><td><%= ingredient.name%></td></tr>
   <%end%>
 </table>
-<div id='calories'><%= @dish.tot_cal%> </div>
+<div id='calories'>Total calories: <%= @dish.tot_cal%> </div>
 <br>
-<div id='chef'><%= @dish.chef.name %> </div>
+<div id='chef'>Chef: <%= @dish.chef.name %> </div>

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Chef Ingredients Index Page', type: :feature do
-  describe "As a visitor, When I visit a Chef's show page" do
+  describe "As a visitor, When I visit a Chef's Ingredient Index page" do
     let!(:guy) { Chef.create!(name: 'Guy Pierry') }
     let!(:bbb) { guy.dishes.create!(name: 'Bacon Baugette Bonanza', description: 'From Paris, the town of flavor') }
     let!(:bread) { Ingredient.create!(name: 'French Bread', calories: 600) }
@@ -16,7 +16,7 @@ RSpec.describe 'Chef Ingredients Index Page', type: :feature do
 
     it 'I can see a unique list of names of all the ingredients that this chef uses.' do
       within '#ingr_arsenal' do
-        guy.used_ingredients.each do |ingredient|
+        guy.ingr_used.each do |ingredient|
           expect(page).to have_content(ingredient.name)
         end
       end

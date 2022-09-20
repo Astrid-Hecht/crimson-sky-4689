@@ -23,7 +23,7 @@ RSpec.describe Chef, type: :model do
       end
 
       it 'doesnt return unused ones' do
-        excpect(guy.ingr_used.include?(lettuce)).to be(false)
+        expect(guy.ingr_used.include?(lettuce)).to be(false)
       end
 
     end

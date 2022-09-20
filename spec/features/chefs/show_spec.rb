@@ -15,17 +15,12 @@ RSpec.describe 'Chef Show Page', type: :feature do
 
     it "I see the chef's name " do
       within '#name' do
-        expect(page).to have_content(bbb.name)
+        expect(page).to have_content('Name: ' + guy.name)
       end
     end
 
     it 'And I see a link to view a list of all ingredients that this chef uses in their dishes' do
       expect(page).to have_link("Ingredients Used")
-      # within '#ingr_arsenal' do
-      #   guy.used_ingredients.each do |ingredient|
-      #     expect(page).to have_content(ingredient.name)
-      #   end
-      # end
     end
 
     it "When I click on that link I'm taken to a chef's ingredient index page" do

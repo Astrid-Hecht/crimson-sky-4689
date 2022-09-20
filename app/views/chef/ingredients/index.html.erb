@@ -1,0 +1,8 @@
+<h1>Ingredients used by Chef <%=@chef.name%></h1>
+
+<table id='ingr_arsenal'>
+  <tr><td>Ingredients</td></tr>
+  <%@ingredients.each do |ingredient|%>
+  <tr><td><%= ingredient.name%></td></tr>
+  <%end%>
+</table>

@@ -15,10 +15,10 @@ RSpec.describe 'Dish Show Page', type: :feature do
 
     it 'I see the dish’s name and description' do
       within '#name' do
-        expect(page).to have_content(bbb.name)
+        expect(page).to have_content('Name: ' + bbb.name)
       end
       within '#descript' do
-        expect(page).to have_content(bbb.description)
+        expect(page).to have_content('Description: ' + bbb.description)
       end
     end
 
@@ -31,13 +31,13 @@ RSpec.describe 'Dish Show Page', type: :feature do
 
     it "And I see the chef's name" do
       within '#chef' do
-        expect(page).to have_content(guy.name)
+        expect(page).to have_content('Chef: ' + guy.name)
       end
     end
 
     it 'and I see the total calorie count for that dish' do 
       within '#calories' do
-        expect(page).to have_content(bbb.tot_cal)
+        expect(page).to have_content('Total calories: ' + bbb.tot_cal.to_s)
       end
     end
 

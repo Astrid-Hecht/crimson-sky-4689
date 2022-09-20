@@ -1,0 +1,5 @@
+<h1><%=@chef.name%> Info</h1>
+
+<div id='name'>Name: <%= @chef.name%> </div>
+<br>
+<%= link_to 'Ingredients Used', chef_ingredients_path(@chef) %>
