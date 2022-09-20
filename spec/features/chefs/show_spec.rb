@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Dish Show Page', type: :feature do
-  describe "As a visitor, When I visit a dish's show page" do
+RSpec.describe 'Chef Show Page', type: :feature do
+  describe "As a visitor, When I visit a Chef's show page" do
     let!(:guy) {Chef.create!(name: 'Guy Pierry')}
     let!(:bbb) {guy.dishes.create!(name: 'Bacon Baugette Bonanza', description: 'From Paris, the town of flavor')}
     let!(:bread) {Ingredient.create!(name: 'French Bread', calories: 600)}
