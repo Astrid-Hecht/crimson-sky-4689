@@ -2,4 +2,14 @@
 
 <div id='name'>Name: <%= @chef.name%> </div>
 <br>
+
+<table id='top_ingr'>
+  <tr>
+    <th>Top 3 Most Used Ingredients</th>
+  </tr>
+  <%@chef.top_ingr.each do |ingr|%>
+    <tr><td><%= ingr.name %></td></tr>
+  <%end%>
+</table>
+
 <%= link_to 'Ingredients Used', chef_ingredients_path(@chef) %>
