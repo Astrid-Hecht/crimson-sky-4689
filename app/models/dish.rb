@@ -7,4 +7,5 @@ class Dish < ApplicationRecord
   def tot_cal
     ingredients.sum('calories')
   end
+  
 end
